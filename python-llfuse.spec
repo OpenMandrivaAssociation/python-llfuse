@@ -1,9 +1,8 @@
 Name:               python-llfuse
-Version:            0.36
+Version:            0.37
 Release:            1
 Summary:            Python Bindings for the low-level FUSE API
 Source0:            http://python-llfuse.googlecode.com/files/llfuse-%{version}.tar.bz2
-#Patch1:             python-llfuse-disable_sphinx.patch
 URL:                http://code.google.com/p/python-llfuse/
 Group:              Development/Python
 License:            LGPLv2+
@@ -22,7 +21,6 @@ used by other projects as well.
 
 %prep
 %setup -q -n "llfuse-%{version}"
-#patch1
 %__rm doc/html/.buildinfo
 
 %build
