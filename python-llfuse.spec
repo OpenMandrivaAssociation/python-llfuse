@@ -1,12 +1,11 @@
 Name:               python-llfuse
-Version:            0.37
+Version:            0.37.1
 Release:            1
 Summary:            Python Bindings for the low-level FUSE API
 Source0:            http://python-llfuse.googlecode.com/files/llfuse-%{version}.tar.bz2
 URL:                http://code.google.com/p/python-llfuse/
 Group:              Development/Python
 License:            LGPLv2+
-BuildRoot:          %{_tmppath}/build-%{name}-%{version}
 BuildRequires:      libattr-devel
 BuildRequires:      fuse-devel >= 2.8.0
 BuildRequires:      python-distribute >= 0.6.12
