@@ -33,3 +33,18 @@ used by other projects as well.
 %files
 %doc Changes.txt doc/html
 %{python_sitearch}/*
+
+
+%changelog
+* Sun Jan 22 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 0.37.1-1
++ Revision: 764912
+- new version 0.37.1
+
+* Tue Dec 06 2011 Dmitry Mikhirev <dmikhirev@mandriva.org> 0.37-1
++ Revision: 738418
+- Update to 0.37
+
+* Tue Nov 29 2011 Dmitry Mikhirev <dmikhirev@mandriva.org> 0.36-1
++ Revision: 735378
+- imported package python-llfuse
+
