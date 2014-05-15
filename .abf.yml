@@ -1,2 +1,4 @@
+removed_sources:
+  llfuse-0.37.1.tar.bz2: 62344aad753a1b996d4d18851af55cf9074c6085
 sources:
-  "llfuse-0.37.1.tar.bz2": 62344aad753a1b996d4d18851af55cf9074c6085
+  llfuse-0.40.tar.bz2: 1c3ad7a7d79c2386544a9b9bc0500c028c98e798

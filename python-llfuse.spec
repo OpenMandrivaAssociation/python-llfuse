@@ -1,15 +1,16 @@
 Name:               python-llfuse
-Version:            0.37.1
+Version:            0.40
 Release:            1
 Summary:            Python Bindings for the low-level FUSE API
+
 Source0:            http://python-llfuse.googlecode.com/files/llfuse-%{version}.tar.bz2
 URL:                http://code.google.com/p/python-llfuse/
 Group:              Development/Python
 License:            LGPLv2+
-BuildRequires:      attr-devel
+BuildRequires:      libattr-devel
 BuildRequires:      fuse-devel >= 2.8.0
-BuildRequires:      python-setuptools
-%py_requires -d
+BuildRequires:      python-distribute >= 0.6.12
+BuildRequires:  python-devel
 
 %description
 LLFUSE is a set of Python bindings for the low level FUSE API. It requires at
@@ -32,19 +33,6 @@ used by other projects as well.
 
 %files
 %doc Changes.txt doc/html
-%{python_sitearch}/*
+%{py_platsitedir}/*
 
-
-%changelog
-* Sun Jan 22 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 0.37.1-1
-+ Revision: 764912
-- new version 0.37.1
-
-* Tue Dec 06 2011 Dmitry Mikhirev <dmikhirev@mandriva.org> 0.37-1
-+ Revision: 738418
-- Update to 0.37
-
-* Tue Nov 29 2011 Dmitry Mikhirev <dmikhirev@mandriva.org> 0.36-1
-+ Revision: 735378
-- imported package python-llfuse
 
