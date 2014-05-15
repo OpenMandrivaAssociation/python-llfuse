@@ -7,10 +7,10 @@ Source0:            http://python-llfuse.googlecode.com/files/llfuse-%{version}.
 URL:                http://code.google.com/p/python-llfuse/
 Group:              Development/Python
 License:            LGPLv2+
-BuildRequires:      libattr-devel
+BuildRequires:      attr-devel
 BuildRequires:      fuse-devel >= 2.8.0
 BuildRequires:      python-distribute >= 0.6.12
-BuildRequires:  python-devel
+BuildRequires:      python-devel
 
 %description
 LLFUSE is a set of Python bindings for the low level FUSE API. It requires at
