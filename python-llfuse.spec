@@ -1,6 +1,6 @@
 Name:               python-llfuse
 Version:            0.40
-Release:            1
+Release:            2
 Summary:            Python Bindings for the low-level FUSE API
 
 Source0:            http://python-llfuse.googlecode.com/files/llfuse-%{version}.tar.bz2
