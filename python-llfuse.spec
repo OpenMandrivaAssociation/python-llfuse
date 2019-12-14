@@ -38,7 +38,7 @@ rm doc/html/.buildinfo
 %install
 %py_install
 
-%files -n python-%{module}
+%files -n python-llfuse
 %license LICENSE
 %doc Changes.rst doc/html
 %{python_sitearch}/*
