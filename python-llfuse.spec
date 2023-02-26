@@ -9,7 +9,7 @@ URL:                https://github.com/python-llfuse/python-llfuse
 Group:              Development/Python
 License:            LGPLv2+
 BuildRequires:      pkgconfig(fuse)
-BuildRequires:      pkgconfig{python}
+BuildRequires:      pkgconfig(python)
 BuildRequires:      python3dist(setuptools)
 BuildRequires:      python3dist(cython)
 BuildRequires:      python3dist(pip)
