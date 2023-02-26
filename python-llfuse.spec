@@ -10,6 +10,7 @@ Group:              Development/Python
 License:            LGPLv2+
 BuildRequires:      pkgconfig(fuse)
 BuildRequires:      pkgconfig(python)
+BuildRequires:      python3dist(cython)
 BuildRequires:      python3dist(setuptools)
 BuildRequires:      python3dist(cython)
 BuildRequires:      python3dist(pip)
@@ -26,13 +27,11 @@ used by other projects as well.
 %setup -q -n llfuse-%{version}
 %autopatch -p1
 
-# drop bundled egg-info
-rm -rf src/%{module}.egg-info
-
 # re-generate sources
 find . -type f -name "llfuse.c" -print -delete
 
 %build
+%__python3 setup.py build_cython
 %py_build
 
 rm doc/html/.buildinfo
