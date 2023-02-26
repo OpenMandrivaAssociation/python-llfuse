@@ -1,16 +1,20 @@
+%define pypi_name llfuse
 Name:               python-llfuse
-Version:            1.3.6
+Version:            1.4.2
 Release:            1
 Summary:            Python Bindings for the low-level FUSE API
 
-Source0:            https://files.pythonhosted.org/packages/75/b4/5248459ec0e7e1608814915479cb13e5baf89034b572e3d74d5c9219dd31/llfuse-%{version}.tar.bz2
+Source0:            https://pypi.io/packages/source/l/%{name}/%{pypi_name}-%{version}.tar.gz
 URL:                https://github.com/python-llfuse/python-llfuse
 Group:              Development/Python
 License:            LGPLv2+
 BuildRequires:      pkgconfig(fuse)
-BuildRequires:      python3-devel
+BuildRequires:      pkgconfig(python)
+BuildRequires:      python3dist(cython)
 BuildRequires:      python3dist(setuptools)
 BuildRequires:      python3dist(cython)
+BuildRequires:      python3dist(pip)
+BuildRequires:      python3dist(wheel)
 
 %description
 LLFUSE is a set of Python bindings for the low level FUSE API. It requires at
@@ -23,14 +27,11 @@ used by other projects as well.
 %setup -q -n llfuse-%{version}
 %autopatch -p1
 
-# drop bundled egg-info
-rm -rf src/%{module}.egg-info
-
 # re-generate sources
 find . -type f -name "llfuse.c" -print -delete
 
 %build
-%__python setup.py build_cython
+%__python3 setup.py build_cython
 %py_build
 
 rm doc/html/.buildinfo
@@ -38,7 +39,7 @@ rm doc/html/.buildinfo
 %install
 %py_install
 
-%files -n python-llfuse
+%files
 %license LICENSE
 %doc Changes.rst doc/html
 %{python_sitearch}/*
