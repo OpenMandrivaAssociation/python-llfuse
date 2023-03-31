@@ -1,7 +1,7 @@
 %define pypi_name llfuse
 Name:               python-llfuse
 Version:            1.4.2
-Release:            1
+Release:            2
 Summary:            Python Bindings for the low-level FUSE API
 
 Source0:            https://pypi.io/packages/source/l/%{name}/%{pypi_name}-%{version}.tar.gz
