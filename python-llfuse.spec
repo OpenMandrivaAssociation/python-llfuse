@@ -1,20 +1,19 @@
 %define pypi_name llfuse
 Name:               python-llfuse
-Version:            1.4.2
-Release:            3
+Version:            1.5.1
+Release:            1
 Summary:            Python Bindings for the low-level FUSE API
 
-Source0:            https://pypi.io/packages/source/l/%{name}/%{pypi_name}-%{version}.tar.gz
+Source0:            https://pypi.io/packages/source/l/llfuse/%{pypi_name}-%{version}.tar.gz
 URL:                https://github.com/python-llfuse/python-llfuse
 Group:              Development/Python
 License:            LGPLv2+
 BuildRequires:      pkgconfig(fuse)
 BuildRequires:      pkgconfig(python)
-BuildRequires:      python3dist(cython)
-BuildRequires:      python3dist(setuptools)
-BuildRequires:      python3dist(cython)
-BuildRequires:      python3dist(pip)
-BuildRequires:      python3dist(wheel)
+BuildRequires:      python%{pyver}dist(cython)
+BuildRequires:      python%{pyver}dist(setuptools)
+BuildRequires:      python%{pyver}dist(pip)
+BuildRequires:      python%{pyver}dist(wheel)
 
 %description
 LLFUSE is a set of Python bindings for the low level FUSE API. It requires at
