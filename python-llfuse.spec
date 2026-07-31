@@ -1,6 +1,6 @@
 %define pypi_name llfuse
 Name:               python-llfuse
-Version:            1.5.1
+Version:            1.5.2
 Release:            1
 Summary:            Python Bindings for the low-level FUSE API
 
@@ -23,7 +23,7 @@ LLFUSE was originally part of S3QL, but has been factored out so that it can be
 used by other projects as well. 
 
 %prep
-%setup -q -n llfuse-%{version}
+%setup -q -n llfuse-1.5.2
 %autopatch -p1
 
 # re-generate sources
